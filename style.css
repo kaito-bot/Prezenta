@@ -5,7 +5,7 @@
     --page2-color:coral;
     --page3-color: slateblue;
     --page4-color:#3498DB ;
-    --animation-time : 2s; 
+    --animation-time : 1s; 
 }
 
 body{
@@ -32,6 +32,7 @@ h1 {
     font-size: 3rem;
     text-shadow: 2px 2px white;
     text-align: center;
+    
 }
 
 p{
@@ -63,10 +64,12 @@ a {
     color: #000;
     font-size: 20px;
 }
+
+/* animations and transitions */
 .btn {
     background-color: white;
     padding: 10px 20px;
-    margin: 20px 5px;
+    margin: 20px 5px 0px 5px;
     border-radius: 5px;
     transition: all 1s ease-in-out;
 }
@@ -74,4 +77,28 @@ a {
 .btn:hover {
     background-color: #333;
     color: white;
+}
+
+
+#page1 h1 {
+    transform: translateY(-1200px);
+    animation: heading var(--animation-time) ease-in 1 normal forwards;
+}
+
+@keyframes heading {
+    to {
+        transform: translateY(0px);   
+    } 
+}
+
+#page1 p {
+    transform: translateX(-2000px);
+    animation: heading var(--animation-time) ease-in 1 normal forwards;
+    animation-delay: 2s;
+}
+
+@keyframes heading {
+    to {
+        transform: translateX(0px);   
+    } 
 }
